@@ -1,3 +1,8 @@
+/**
+ * Email Validator for IPL Social - Version 1.0 (TypeScript)
+ * Developed with TDD methodology
+ */
+
 import {validateEmail} from '../src/emailValidator';
 
 describe('EmailValidator', () => {
