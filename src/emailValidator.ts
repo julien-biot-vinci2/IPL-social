@@ -23,5 +23,10 @@ export function validateEmail(email: string): boolean {
     if(email.endsWith('.')) {
         return false;
     }
+
+    // Criteria 3 : Can't contain space
+    if(email.includes(' ')) {
+        return false;
+    }
     return true;
 }

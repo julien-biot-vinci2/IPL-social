@@ -61,3 +61,27 @@ describe('must contain a dot in the domain', () => {
         expect(result).toBe(false);
     });
 });
+
+describe('can\'t contain space', () => {
+    it('should reject an email with a space', () => {
+        // Arrange
+        const email = 'test user@example.com';
+
+        // Act
+        const result = validateEmail(email);
+
+        // Assert
+        expect(result).toBe(false);
+    });
+
+    it('should accept an email without space', () => {
+        // Arrange
+        const email = 'testuser@example.com';
+
+        // Act
+        const result = validateEmail(email);
+
+        // Assert
+        expect(result).toBe(true);
+    });
+});
