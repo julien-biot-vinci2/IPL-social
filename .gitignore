@@ -1,0 +1,37 @@
+# Dossiers principaux à ignorer
+node_modules/
+dist/
+logs/
+
+# Dependencies
+npm-debug.log*
+
+#Testing
+coverage/
+*.lcov
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build
+build/
+
+# Logs supplémentaires
+*.log
+
+# OS
+Thumbs.db
