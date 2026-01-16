@@ -1,6 +1,13 @@
 /**
  * Validate an email depending on the IPL criterias
  * 
+ * Validation criterias:
+ * - Contains a @
+ * - Contains a dot in the domain's name
+ * - The dot is not the last caracter
+ * - Doesn't contain spaces
+ * - Contains text before and after the @
+ * 
  * @param email - email to validate
  * @returns true if ok, false if not
  */
@@ -28,5 +35,16 @@ export function validateEmail(email: string): boolean {
     if(email.includes(' ')) {
         return false;
     }
+
+    // Criteria 4 : Must have text before the @
+    if(atIndex === 0){
+        return false;
+    }
+
+    // Criteria 4 : Must have text after the @
+    if(atIndex === email.length - 1) {
+        return false;
+    }
+
     return true;
 }
