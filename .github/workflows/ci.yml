@@ -1,15 +1,5 @@
 name : CI Pipeline - IPL Social Email Validator
 
-on:
-    push:
-        branches:
-            - main
-            - develop
-    
-    pull_request:
-        branches:
-            - main
-
 jobs:
     test:
         name: Build and test
@@ -48,3 +38,14 @@ jobs:
                 name: coverage-report
                 path: coverage/
               if: matrix.node-version == '20.x'
+
+
+on:
+    push:
+        branches:
+            - main
+            - develop
+    
+    pull_request:
+        branches:
+            - main
